@@ -4,7 +4,7 @@ try {
     const data = fs.readFileSync('day7.txt', 'UTF-8')
     const lines = data.split("\n")
 
-    // dico -> {name: fileDir, size: number}
+    // dico -> {'path': totalSize}
     let dico = {}
     let path = []
 
@@ -40,12 +40,10 @@ try {
     // Part2
     const max = 70000000 - 30000000
     const rootSize = dico['/']
-    console.log(max, rootSize)
     const needToRemove = rootSize - max
 
     let ans2 = Infinity
     Object.values(dico).forEach(val => {
-        // console.log(val, ans1)
         if (val >= needToRemove) {
             ans2 = Math.min(val, ans2)
         }
