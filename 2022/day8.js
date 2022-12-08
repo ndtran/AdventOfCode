@@ -10,19 +10,12 @@ try {
 
     let ans1 = 0
     function isVisible(val, posX, posY, dirX, dirY) {
-        if (dirX != 0) {
-         let dx = posX + dirX*1
-            while (dx >= 0 && dx <= maxLength) {
-                if (val <= parseInt(lines[dx][posY])) return false
-                dx += dirX*1
-            }
-        }
-        if (dirY != 0) {
-            let dy = posY + dirY*1
-            while (dy >= 0 && dy <= maxLength) {
-                if (val <= parseInt(lines[posX][dy])) return false
-                dy += dirY*1
-            }
+        let dx = posX + dirX*1
+        let dy = posY + dirY*1
+        while (dx >= 0 && dx <= maxLength && dy >= 0 && dy <= maxLength) {
+            if (val <= parseInt(lines[dx][dy])) return false
+            dx += dirX*1
+            dy += dirY*1
         }   
         return true
     }
@@ -42,22 +35,14 @@ try {
     let ans2 = 0
     function nbOfVisible(val, posX, posY, dirX, dirY) {
         let count = 0    
-        if (dirX != 0) {
-            let dx = posX + dirX*1
-            while (dx >= 0 && dx <= maxLength) {
-                count++
-                if (val <= parseInt(lines[dx][posY])) break
-                dx += dirX*1
-            }
+        let dx = posX + dirX*1
+        let dy = posY + dirY*1
+        while (dx >= 0 && dx <= maxLength && dy >= 0 && dy <= maxLength) {
+            count++
+            if (val <= parseInt(lines[dx][dy])) break
+            dx += dirX*1
+            dy += dirY*1
         }
-        if (dirY != 0) {
-            let dy = posY + dirY*1
-            while (dy >= 0 && dy <= maxLength) {
-                count++
-                if (val <= parseInt(lines[posX][dy])) break
-                dy += dirY*1
-            }
-        }   
         return count
     }
     
