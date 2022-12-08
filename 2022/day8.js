@@ -30,10 +30,10 @@ try {
     for(let i=0; i<lines.length; i++) {
         for(let j=0; j<lines[0].length; j++) {
             let n = parseInt(lines[i][j])
-            if (isVisible(n, i, j, 0, -1) > 0) ans1 += 1
-            else if (isVisible(n, i, j, 0, 1) > 0) ans1 += 1
-            else if (isVisible(n, i, j, -1, 0) > 0) ans1 += 1
-            else if (isVisible(n, i, j, 1, 0) > 0) ans1 += 1
+            if (isVisible(n, i, j, 0, -1)) ans1 += 1
+            else if (isVisible(n, i, j, 0, 1)) ans1 += 1
+            else if (isVisible(n, i, j, -1, 0)) ans1 += 1
+            else if (isVisible(n, i, j, 1, 0)) ans1 += 1
         }
     }
     
@@ -69,8 +69,8 @@ try {
     }
 
     // Answer
-    console.log("how many trees are visible from outside the grid? " + ans1)
-    console.log("What is the highest scenic score possible for any tree? " + ans2)
+    console.log("Part1 - how many trees are visible from outside the grid? " + ans1)
+    console.log("Part2 - What is the highest scenic score possible for any tree? " + ans2)
 
     } catch (err) {
         console.error(err)
