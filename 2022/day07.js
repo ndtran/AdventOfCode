@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 try {
-    const data = fs.readFileSync('day7.txt', 'UTF-8')
+    const data = fs.readFileSync('day07.txt', 'UTF-8')
     const lines = data.split("\n")
 
     // dico -> {'path': totalSize}

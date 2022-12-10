@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 try {
-    const data = fs.readFileSync('day1.txt', 'UTF-8')
+    const data = fs.readFileSync('day01.txt', 'UTF-8')
     const lines = data.split(/\r?\n/)
   
     const elfs = []

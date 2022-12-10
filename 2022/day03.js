@@ -2,7 +2,7 @@ const fs = require('fs');
 const { text } = require('stream/consumers');
 
 try {
-    const data = fs.readFileSync('day3.txt', 'UTF-8')
+    const data = fs.readFileSync('day03.txt', 'UTF-8')
     const lines = data.split(/\r?\n/)
   
     const PRIORITY = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'

@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 try {
-    const data = fs.readFileSync('day8.txt', 'UTF-8')
+    const data = fs.readFileSync('day08.txt', 'UTF-8')
     const lines = data.split("\n")
 
     const maxLength = lines.length-1

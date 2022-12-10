@@ -2,7 +2,7 @@ const fs = require('fs');
 const { text } = require('stream/consumers');
 
 try {
-    const data = fs.readFileSync('day4.txt', 'UTF-8')
+    const data = fs.readFileSync('day04.txt', 'UTF-8')
     const lines = data.split("\n")
 
     let overlappingPart1 = 0
