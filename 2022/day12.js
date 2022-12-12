@@ -12,12 +12,10 @@ try {
     let visited = new Set();
     let queue = []
 
-    function nbOfStepToFindE() {
+    // info: Breadth-First Search Algorithm
+    function nbOfStepToReachE() {
         while(queue.length > 0) {
             let [r,c,step] = queue.shift()
-            let position = [r,c].join('_')
-            if (visited.has(position)) continue
-            visited.add(position)
             
             if (lines[r][c] === 'E') {
                 return step
@@ -41,6 +39,9 @@ try {
                 if (lines[rr][cc] === 'E') next = 'z'.charCodeAt(0)
                 if (next > current + 1) continue
 
+                let position = [rr,cc].join('_')
+                if (visited.has(position)) continue
+                visited.add(position)
                 queue.push([rr,cc,step+1])
             }
         }
@@ -55,7 +56,7 @@ try {
         queue.push([r,s,0])
         break
     }
-    ans1 = nbOfStepToFindE()
+    ans1 = nbOfStepToReachE()
 
     // PART 2
     visited = new Set()
@@ -65,7 +66,7 @@ try {
             if (lines[r][c] === 'a') queue.push([r,c,0])
         }
     }
-    ans2 = nbOfStepToFindE()
+    ans2 = nbOfStepToReachE()
    
     // Answers
     console.log("Part1 - What is the fewest steps required to move from your current position to the location that should get the best signal?", ans1)
