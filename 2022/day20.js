@@ -6,7 +6,7 @@ try {
 
     // PART 1
 
-    let array = lines.map((n,i) => `${n}_${i}`) // number is not unique 
+    let array = lines.map((n,i) => `${n}_${i}`) // number in lines is not always unique 
     for (let i=0; i<lines.length; i++) {
         let position = array.indexOf(`${lines[i]}_${i}`)
         let item = array.splice(position,1)[0]
@@ -28,7 +28,7 @@ try {
     const decryptionKey = 811589153
     const mixNumber = 10
     const newInput = lines.map(n => n * decryptionKey)
-    let array2 = newInput.map((n,i) => `${n}_${i}`) // number is not unique 
+    let array2 = newInput.map((n,i) => `${n}_${i}`) // number in lines is not always unique 
     for (let t=0; t<mixNumber; t++) {
         for (let i=0; i<newInput.length; i++) { // same loop as part 1
             let position = array2.indexOf(`${newInput[i]}_${i}`)
