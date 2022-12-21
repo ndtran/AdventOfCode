@@ -1,0 +1,26 @@
+# with test data
+
+## open valves
+[ 'BB', 'CC', 'DD', 'EE', 'HH', 'JJ' ]
+
+## Part1 - What is the most pressure you can release? 
+- 1651 
+- with best path --> AA::DD::BB::JJ::HH::EE::END
+
+## Part2 - With you and an elephant working together for 26 minutes, what is the most pressure you could release? 
+- 1707 
+- with h best path --> AA::DD::HH::END with elephant best path --> AA::JJ::BB::END
+
+
+# with day16.txt data 
+
+## open valves
+[ 'OA', 'QO', 'UE', 'JJ', 'MI', 'WG', 'GY', 'OQ', 'NK', 'RY', 'JE', 'JH', 'EW', 'MC', 'GO' ] 
+
+## Part1 - What is the most pressure you can release? 
+- 1767 
+- with best path --> AA::QO::MC::GY::MI::RY::OA::OQ::END
+
+## Part2 - With you and an elephant working together for 26 minutes, what is the most pressure you could release? 
+- 2528 
+- with h best path --> AA::JE::WG::EW::NK::END with elephant best path --> AA::QO::MC::GY::MI::RY::OA::END
