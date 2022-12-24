@@ -138,6 +138,7 @@ try {
     }
     ans2++ // add the last step
     // draw()
+
     // Answers
 
     console.log('Part1 - How many empty ground tiles does that rectangle contain?', ans1)
