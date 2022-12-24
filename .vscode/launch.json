@@ -8,10 +8,8 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}/2022/day21.js",
+            "skipFiles": ["<node_internals>/**"],
+            "program": "${workspaceFolder}/2022/day23.js",
             "cwd": "${workspaceFolder}/2022"
         }
     ]
